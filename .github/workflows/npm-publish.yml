@@ -22,10 +22,3 @@ jobs:
           node-version: 12
       - run: yarn install
       - run: npm run make
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist-without-markdown
-          path: |
-            out
-            !out/**/*.md
